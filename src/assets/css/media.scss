@@ -1,0 +1,573 @@
+@import "reset", "common";
+
+@media all and (min-width: 1024px) and (orientation: landscape) {
+  #intro {
+    padding-bottom: 6.5rem;
+    background-image: url('~@/assets/img/intro/landscape/img_visual.png');
+    > div:nth-child(1) {
+      text-align: center;
+      img {
+        margin: 0 auto;
+      }
+      > h1 {
+        img {
+          display:none;
+          width: 100%;
+          & + img {
+            display: block;
+            width: auto;
+            height: 34.1rem;
+          }
+        }
+      }
+      p {
+        font-size: 2.6rem;
+        font-weight: 300;
+      }
+    }
+    > div:nth-child(2) {
+      text-align: center;
+      > a {
+        margin: 0 auto;
+        height: 8rem;
+        border-radius: 4rem;
+        img {width: 14.2rem;}
+      }
+      > span {
+        display: inline-block;
+        padding-left: 2.2rem;
+        font-size: 1.8rem;
+        br {display: block;}
+      }
+    }
+    > img {
+      width: 12rem;
+      bottom: 3rem;
+    }
+    > button {display: none;}
+  }
+
+  #survey {
+    .progressTimerBox {
+      left: 8rem;
+      width: calc(100% - 16rem);
+      height: 16rem;
+      .stepProgress {
+        padding-top: 3rem;
+        > ul {
+          height: 2.6rem;
+          > li {
+            span {
+              width: 1.6rem;
+              height: 1.6rem;
+              margin: 0.5rem;
+              font-size: 1.6rem;
+            }
+            &.active span {
+              width: 2.6rem;
+              height: 2.6rem;
+              margin: 0rem;
+            }
+          }
+        }
+      }
+      .timer {
+        position: absolute;
+        bottom: 0;
+        right: 2rem;
+        padding: 0;
+        > div {
+          width: 14rem;
+          height: 6rem;
+          border-radius: 3rem;
+          span {
+            font-size: 4rem;
+          }
+        }
+      }
+    }
+    .questionBox {
+      padding: 0 8rem 11rem;
+      > div {
+        .visualBox {
+          height: calc(100% - 17rem);
+          border-radius: 0 0 3rem 3rem;
+          > img {
+            display: none;
+            border-radius: 0 0 3rem 3rem;
+            & + img {
+              display: block;
+              top: 0;
+              bottom: auto;
+            }
+          }
+          .titleBox {
+            width: calc(100% - 24rem);
+            margin: 0 auto;
+            padding: 0;
+            h2 {
+              position: absolute;
+              bottom: 7rem;
+              left: 0;
+              padding: 0;
+              img:first-child {
+                width: auto;
+                height: 6rem;
+                margin-bottom: 1.2rem;
+                margin-left: -3.6rem;
+              }
+              img:nth-child(2) {
+                margin-left: -3.6rem;
+                width: auto;
+                width: 54.6rem;
+              }
+            }
+          }
+        }
+        .answerBox {
+          width: calc(100% - 24rem);
+          height: 22rem;
+          margin-top: -5rem;
+
+          // display: grid;
+          // grid-gap: 2rem;
+          // grid-template-columns: repeat(2, 1fr);
+
+          flex-wrap: wrap;
+          flex-direction: inherit;
+          justify-content: space-between;
+          align-content: space-between;
+          button {
+            margin: 0 !important;
+            height: 100%;
+            border-radius: 3rem;
+            font-size: 2.6rem;
+            letter-spacing: -1px;
+
+            display: inline-block;
+            width: calc(50% - 1rem);
+            flex: inherit;
+            em {
+              display: inline-block;
+              padding-left: 7.5rem;
+              line-height: 6.6rem;
+              &:after {
+                width: 6.6rem;
+                height: 6.6rem;
+                background-size: 13.2rem;
+              }
+            }
+            span {
+              display: inline-block;
+              width: 8rem;
+              height: 8rem;
+              line-height: 8rem;
+              background-size: 16rem auto;
+            }
+            &.on {
+              span {background-position: 0 -8rem;}
+              em:after {background-position: 0 -6.6rem;}
+            }
+            & + button {
+              span {background-position: -8rem 0;}
+              &.on span {background-position: -8rem -8rem;}
+            }
+          }
+          &.list3 {
+            button {
+              width: calc(33.33% - 1rem);
+            }
+          }
+          &.list4 {
+            button {
+              height: calc(50% - 1rem);
+            }
+          }
+          button:nth-child(2) {
+            em:after {background-position: -6.6rem 0;}
+            &.on {
+              em:after {background-position: -6.6rem -6.6rem;}
+            }
+          }
+        }
+        .btnBox {
+          display: block; 
+          text-align: right;
+          width: calc(100% - 20rem);
+          left: 10rem;
+          right: 10rem;
+          button {
+            width: 18rem;
+            height: 6rem;
+            border-radius: 3rem;
+
+            font-size: 2rem;
+            font-weight: 800;
+            & + button {margin-left: 2rem;}
+          }
+        }
+      }
+    }
+    #layerTimeover {
+      padding: 2.5rem 12rem;
+      .inner {
+        > img {
+          width: 17.4rem;
+          & + img {
+            width: 17.7rem;
+            margin-top: 3rem;
+          }
+        }
+        > p {
+          font-size: 2.6rem;
+        }
+        > button {
+          width: 50rem;
+          height: 6rem;
+          margin-top: 3rem;
+
+          font-size: 2rem;
+          font-weight: 800;
+          border-radius: 3rem;
+        }
+      }
+    }
+  }
+
+  #result {
+    > .inner {
+      .titleBox {
+        h2 {
+          img {
+            display: none;
+            & + img {
+              display: block;
+              margin: 0 auto;
+              width: auto;
+              height: 6.6rem;
+            }
+          }
+        }
+      }
+    .contentBox {
+        width: calc(100% - 20rem);
+        margin: 0 auto;
+        padding: 0 0 9rem;
+        .inner {
+          .visualContents {
+            > ul {
+              display: flex;
+              padding: 1.5rem 0;
+              margin: 0;
+              height: 46rem;
+              > li {
+                position: relative;
+                flex-direction: column;
+                width: 23rem;
+                height: 100%;
+                padding: 0;
+                h3 {
+                  width: 100%;
+                  height: 5.8rem;
+                  line-height: 5rem;
+                  padding: 0 0 0 5.4rem;
+                  font-size: 2.8rem;
+                  text-align: left;
+                  &:after {
+                    width: 5rem;
+                    height: 5rem;
+                  }
+                }
+                em {
+                  width: auto;
+                  padding: 0;
+                  font-size: 2.4rem;
+                }
+                > div.graph {
+                  position: absolute;
+                  left: 50%;
+                  bottom: 3.6rem;
+                  transform: translateX(-50%);
+                }
+                .graph {
+                  width: 10rem;
+                  height: calc(100% - 9.4rem);
+                  border: 0 none;
+                  border-bottom: 1px solid #252B65;
+                  span {
+                    top: auto;
+                    bottom: 0;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    width: 4rem;
+                    height: 100%;
+                    border-radius: 3rem 3rem 0 0;
+                  }
+                }
+                & + li {
+                  padding-left: 2rem;
+                  margin-left: 0;
+                  border-top: 0 none;
+                  border-left: 1px solid #BBC5FF;
+                }
+              }
+              > li:nth-child(1) {
+                flex: 2 1 0;
+                > h3 {margin-left: 2rem;}
+                > div {
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  transform: translateX(0);
+                  width: 100%;
+                  height: calc(100% - 5.8rem);
+                  > ul {
+                    position: relative;
+                    display: flex;
+                    justify-content: center;
+                    height: 100%;
+                    > li {
+                      position: relative;
+                      width: 10rem;
+                      height: 100%;
+                      flex-direction: column;
+                      > em {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        text-align: center;
+                      }
+                      > .graph {
+                        position: absolute;
+                        bottom: 3.6rem;
+                        left: 0;
+                        height: calc(100% - 3.6rem);
+                      }
+                    }
+                  }
+                }
+              }
+              > li:nth-child(2) {
+                h3 {line-height: 1;}
+              }
+            }
+          }
+        }
+      }
+    }
+    // 결과 페이지 그래프 세로로 변경되는 스타일
+    &.landScape {
+      > .inner {
+        .contentBox {
+          .inner {
+            .visualContents {
+              > ul {
+                > li {
+                  .graph {
+                    span {
+                      width: 4rem !important;
+                      height: 0;
+                      transition: height 0.5s ease-in-out;
+                    }
+                  }
+                }
+              }
+              > div.text {
+                text-align: center;
+                > p {
+                  display: inline-block;
+                  font-size: 1.8rem;
+                  padding-left: 2rem;
+                }
+              }
+              .btnBox {
+                display: block; 
+                text-align: right;
+                width: calc(100% - 20rem);
+                left: 10rem;
+                button {
+                  width: 18rem;
+                  height: 6rem;
+                  border-radius: 3rem;
+      
+                  font-size: 2rem;
+                  font-weight: 800;
+                  & + button {margin-left: 2rem;}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.guarantee {
+      > .inner {
+        .titleBox {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          h2 {
+            position: relative;
+            display: inline-block;
+            width: auto;
+            padding: 0;
+            img {
+              display: none;
+              & + img {
+                display: block;
+                width: auto;
+                height: 13.6rem;
+              }
+            }
+          }
+          span {
+            top: 36%;
+            // left: 55.8%;
+            left: 61%;
+
+            width: 12.2rem;
+            height: 6rem;
+
+            font-size: 4rem;
+            // &:after {
+            //   right: 0.8rem;
+            //   width: 3.6rem;
+            //   height: 3.6rem;
+            // }
+          }
+        }
+        .contentBox {
+          padding-top: 1rem;
+          .inner {
+            .visualContents {
+              > .guaranteePopup {     
+                margin: 0;
+                padding: 3.6rem 0 5rem;
+                font-size: 2.4rem;
+                > p {
+                  font-size: 2.4rem;
+                  br {display: none;}
+                }
+                > ul {
+                  > li {
+                    width: 25%;
+                    margin: 4.6rem 0 0;
+                    img {
+                      width: 13rem;
+                      height: 13rem;
+                    }
+                    > strong {
+                      padding-right: 4rem;
+                      font-size: 3.6rem;
+                      line-height: 5rem;
+                      span {
+                        padding: 0 1.5rem;
+                        border-radius: 2.5rem;
+                      }
+                      &:after {
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        right: 0;
+                      }
+                    }
+                    & + li {
+                      border-left: 1px dashed #406EFF;
+                    }
+                  }
+                  &:before,
+                  &:after {display: none;}
+                }
+              }
+              > p {
+                font-size: 3rem;
+                letter-spacing: -1px;
+                br {display: none;}
+              }
+              .btnBox {
+                display: block; 
+                text-align: right;
+                width: calc(100% - 20rem);
+                left: 10rem;
+                button {
+                  width: 38.5rem;
+                  height: 6rem;
+                  border-radius: 3rem;
+      
+                  font-size: 2rem;
+                  font-weight: 800;
+                  & + button {margin-left: 2rem;}
+                }
+              }
+            }
+          }
+        }
+      }
+      #layerPopup {
+        padding: 8rem 10rem;
+        .inner {
+          padding: 8rem 0;
+          .visual {
+            display: none;
+            & + .visual {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 4:3 공통 스타일
+@media all and (min-width:1024px) and (device-aspect-ratio: 4/3) and (orientation: landscape){
+  #survey {
+    .questionBox {
+      padding: 0 4rem 11rem;
+      > div {
+        .visualBox {
+          height: auto;
+          img {
+            position: static;
+          }
+        }
+        .answerBox {
+          width: calc(100% - 14rem);
+        }
+      }
+    }
+  }
+  #result > .inner .titleBox {height: calc(25% - 3rem);}
+  #result > .inner .contentBox {width: calc(100% - 5rem);height: calc(100% - 25% + 3rem);}
+  #result > .inner .contentBox .inner .visualContents > ul {height: 42rem;}
+
+}
+// 2048
+@media all and (min-width:2048px) and (device-aspect-ratio: 4/3) and (orientation: landscape){
+  html, body {
+    font-size: 20px;
+  }
+  #result > .inner .contentBox {max-width: inherit;}
+}
+
+// 16:9
+@media all and (min-width:1280px) and (device-aspect-ratio: 16/9) and (orientation: landscape){
+  #result > .inner .titleBox {height: calc(25% - 3rem);}
+  #result > .inner .contentBox {height: calc(100% - 25% + 3rem);}
+  #result > .inner .contentBox .inner .visualContents > ul {height: 42rem;}
+
+  #intro {
+    
+  }
+}
+
+// 16:10
+@media all and (min-width:1280px) and (device-aspect-ratio: 16/10) and (orientation: landscape){
+  #intro {
+    
+  }
+
+  #app.on {
+
+  }
+}
